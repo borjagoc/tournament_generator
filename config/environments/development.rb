@@ -59,6 +59,12 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # Allow connections to local server on cloud IDE.
+  config.hosts.clear
+
+  #config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.file_watcher = ActiveSupport::FileUpdateChecker
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
